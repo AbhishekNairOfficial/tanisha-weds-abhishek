@@ -2,7 +2,9 @@ import Landing from "../../organisms/Landing/Landing"
 
 const HomePage = () => {
     return (
-        <Landing />
+        <main className="bg-bg">
+            <Landing />
+        </main>
     )
 }
 
