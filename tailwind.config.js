@@ -13,9 +13,16 @@ export default {
     },
     colors: {
       primary: "#238857",
-      bg: '#FFEEDF'
+      bg: '#FFEEDF',
+      secondary: '#238857CC',
+      white: '#fff'
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        primary: ['Baskervville SC'],
+        secondary: ["Cormorant Upright"],
+      }
+    },
   },
   plugins: [],
 }
