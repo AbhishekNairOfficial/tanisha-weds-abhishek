@@ -20,8 +20,8 @@ const EventCard = (props: EventCardProps) => {
     const formattedDate = new Date(date).toLocaleString(undefined, dateOptions)
 
     return (
-        <div className="mx-12 shadow-sm rounded">
-            <img src={image} alt='Event Card Main'></img>
+        <div className="mx-12">
+            <img className="shadow-lg rounded-lg" src={image} alt='Event Card Main'></img>
             <div className="h-4" />
             <h3 className="font-primary text-primary text-4xl">{title}</h3>
             <span className="font-secondary text-black text-2xl">{formattedDate}</span>
