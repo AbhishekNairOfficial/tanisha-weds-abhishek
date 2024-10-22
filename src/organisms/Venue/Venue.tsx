@@ -1,6 +1,6 @@
 import venueConfig from '../../config/venueConfig';
 import VENUE_PHOTO from '../../assets/venue-photo.png';
-import { InfoWindow, Map, Marker } from '@vis.gl/react-google-maps';
+import { Map, Marker } from '@vis.gl/react-google-maps';
 import { useRef } from 'react';
 
 const Venue = () => {
