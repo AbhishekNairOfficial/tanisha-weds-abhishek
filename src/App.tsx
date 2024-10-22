@@ -1,4 +1,4 @@
-import {APIProvider, Map} from '@vis.gl/react-google-maps';
+import {APIProvider} from '@vis.gl/react-google-maps';
 
 import './App.css'
 import HomePage from './pages/Home/Home'
