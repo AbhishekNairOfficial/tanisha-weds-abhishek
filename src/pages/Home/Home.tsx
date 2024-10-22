@@ -8,8 +8,10 @@ const HomePage = () => {
             <Landing />
             <div className="h-48"></div>
             <Events />
-            <div className="h-48"></div>
+            <div className="h-24 md:h-48"></div>
             <Venue />
+            <div className="h-48"></div>
+            
         </main>
     )
 }
