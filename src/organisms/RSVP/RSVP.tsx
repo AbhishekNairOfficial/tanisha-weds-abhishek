@@ -9,8 +9,8 @@ const RSVPComponent = () => {
                 RSVP
             </h1>
             <div className="h-4 md:h-8"></div>
-            <div className="flex flex-col justify-center mx-5 md:mx-[160px]">
-                <p className='font-secondary text-primary text-2xl whitespace-pre text-center'>{body}</p>
+            <div className="flex flex-col justify-center mx-5 md:mx-[200px]">
+                <p className='font-secondary text-primary text-2xl md:whitespace-pre text-center'>{body}</p>
                 <div className="h-16 md:h-24"></div>
                 <Form />
             </div>

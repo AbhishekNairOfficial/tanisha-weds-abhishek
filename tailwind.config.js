@@ -15,7 +15,9 @@ export default {
       primary: "#238857",
       bg: '#FFEEDF',
       secondary: '#238857CC',
-      white: '#fff'
+      white: '#fff',
+      bgWhite: '#ffffff80',
+      error: 'red',
     },
     extend: {
       fontFamily: {

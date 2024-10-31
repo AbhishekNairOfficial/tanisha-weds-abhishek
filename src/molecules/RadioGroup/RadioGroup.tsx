@@ -19,16 +19,19 @@ const RadioGroupComponent = <T extends FieldValues>(props: RadioGroupProps<T>) =
 
     return (
         <RadioGroup.Root name={name} aria-label={label}>
-            <label>{label}</label>
-            {options.map((option) => (
-                <Radio
-                    register={register}
-                    label={option.label}
-                    value={option.value}
-                    key={option.value}
-                    parentName={name}
-                />
-            ))}
+            <label className="text-black font-secondary text-2xl block mb-2">{label}</label>
+            <div className="flex gap-5">
+                {options.map((option) => (
+                    <Radio
+                        register={register}
+                        label={option.label}
+                        value={option.value}
+                        key={option.value}
+                        parentName={name}
+                    />
+                ))}
+
+            </div>
         </RadioGroup.Root>
     )
 }

@@ -17,9 +17,13 @@ const Input = <T extends FieldValues>(props: InputProps<T>) => {
 
     return (
         <>
-            <label htmlFor={uniqueName}>{label}</label >
-            <input id={uniqueName} {...register(name, { required })} {...rest} />
-            {errors?.nameField && <span>This field is required</span>}
+            <label className="text-black font-secondary text-2xl mt-2" htmlFor={uniqueName}>{label}</label>
+            <input
+                id={uniqueName}
+                className={`p-4 bg-white font-footer text-xl ${errors && errors[name] && 'border-2 border-error'}`}
+                {...register(name, { required })}
+                {...rest} />
+            {errors && errors[name] && <span className="text-error font-footer">This field is required</span>}
         </>
     )
 }

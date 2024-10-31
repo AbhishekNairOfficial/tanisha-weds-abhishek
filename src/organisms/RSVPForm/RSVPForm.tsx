@@ -14,17 +14,19 @@ const Form = () => {
 
     return (
 
-        <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-            <Input errors={errors} name='nameField' label='Name' required register={register} />
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
+            <Input errors={errors} name='nameField' label='Your Name' required register={register} />
             <RadioGroupComponent
                 name='willYouBeJoining'
                 label='Will you be joining us?'
                 options={radioOptions}
                 register={register}
             />
-            <Input errors={errors} name='noOfGuests' label='No.of Guests in your party' required register={register} />
+            <Input errors={errors} name='noOfGuests' label='No.of Guests in your party (Including you)?' required register={register} />
             <Input errors={errors} name='phoneNumber' label='Phone Number' required register={register} />
-            <button type="submit">Submit</button>
+            <button type="submit" className="mt-5 py-3 px-20 bg-secondary rounded-[5px] cursor-pointer text-white font-primary text-2xl m-auto">
+                Submit
+            </button>
         </form >
 
     )
