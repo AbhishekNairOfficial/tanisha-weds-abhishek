@@ -21,6 +21,7 @@ export default {
       fontFamily: {
         primary: ['Baskervville SC'],
         secondary: ["Cormorant Upright"],
+        footer: ['Sedan SC']
       }
     },
   },
