@@ -1,21 +1,19 @@
 import * as RadioGroup from "@radix-ui/react-radio-group";
 import Radio from "../../atoms/Radio/Radio";
-import { FieldValues, Path, UseFormRegister } from "react-hook-form";
 
 type Options = {
     label: string;
     value: string;
 }
 
-type RadioGroupProps<T extends FieldValues> = {
+type RadioGroupProps = {
     options: Options[]
     label: string;
-    register: UseFormRegister<FieldValues>
-    name: Path<T>;
+    name: string
 }
 
-const RadioGroupComponent = <T extends FieldValues>(props: RadioGroupProps<T>) => {
-    const { options, label, register, name } = props;
+const RadioGroupComponent = (props: RadioGroupProps) => {
+    const { options, label, name } = props;
 
     return (
         <RadioGroup.Root name={name} aria-label={label}>
@@ -23,14 +21,11 @@ const RadioGroupComponent = <T extends FieldValues>(props: RadioGroupProps<T>) =
             <div className="flex gap-5">
                 {options.map((option) => (
                     <Radio
-                        register={register}
                         label={option.label}
                         value={option.value}
                         key={option.value}
-                        parentName={name}
                     />
                 ))}
-
             </div>
         </RadioGroup.Root>
     )
