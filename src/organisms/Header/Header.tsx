@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { rsvpSectionId } from '../../config/constants';
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
     }
     return (
         <nav className="px-5 md:px-12 py-5 flex justify-between align-middle">
-            <motion.a
+            <m.a
                 animate={{
                     rotateY: [0, 90, 180, 270, 360],
                 }}
@@ -21,7 +21,7 @@ const Header = () => {
                 href="/"
             >
                 T + A
-            </motion.a>
+            </m.a>
             <button
                 type="button"
                 className="py-1 px-5 bg-secondary rounded-[5px] text-white font-primary text-2xl tracking-[5px]"
