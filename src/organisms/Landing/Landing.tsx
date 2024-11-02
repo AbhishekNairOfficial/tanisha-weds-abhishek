@@ -10,15 +10,15 @@ const Landing = () => {
             <Header />
             <div className="h-24"></div>
             <div className="flex w-screen justify-between absolute">
-                <img className="sm:opacity-100 opacity-50" src={TREE_LEFT_IMAGE} alt="Left Tree" />
-                <img className="hidden md:block" src={TREE_RIGHT_IMAGE} alt="Right Tree" />
+                <img className="sm:opacity-100 opacity-50" src={TREE_LEFT_IMAGE} loading="lazy" alt="Left Tree" />
+                <img className="hidden md:block" src={TREE_RIGHT_IMAGE} loading="lazy" alt="Right Tree" />
             </div>
             <div className="h-24 md:h-0"></div>
             <NameComponent />
             <div className="h-24"></div>
             <h2 className="font-primary text-primary text-2xl md:text-4xl m-auto w-screen text-center">
                 January 19th & 20th, 2025
-                </h2>
+            </h2>
             <div className="h-16 md:h-24"></div>
             <hr className="w-24 mb-[30px] border-t-2 border-primary m-auto text-center" />
             <p className="font-secondary text-center text-2xl px-5 md:w-1/3 m-auto mb-[10px] text-primary">

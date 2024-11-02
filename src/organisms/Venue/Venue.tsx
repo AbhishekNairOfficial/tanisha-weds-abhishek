@@ -1,7 +1,7 @@
 import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 
 import venueConfig from '../../config/venueConfig';
-import VENUE_PHOTO from '../../assets/venue-photo.png';
+import VENUE_PHOTO from '../../assets/venue-photo.webp';
 
 const Venue = () => {
     const { venueTitle, venueAddress, mapTitle, directions, mapCode } = venueConfig;
