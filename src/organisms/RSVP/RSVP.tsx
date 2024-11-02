@@ -1,10 +1,11 @@
+import { rsvpSectionId } from "../../config/constants";
 import rsvpConfig from "../../config/rsvpConfig"
 import Form from "../RSVPForm/RSVPForm";
 
 const RSVPComponent = () => {
     const { body } = rsvpConfig;
     return (
-        <section className="flex flex-col align-center justify-center">
+        <section id={rsvpSectionId} className="flex flex-col align-center justify-center">
             <h1 className="text-primary font-primary text-3xl md:text-5xl underline m-auto">
                 RSVP
             </h1>

@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion';
+import { rsvpSectionId } from '../../config/constants';
 
 const Header = () => {
+
+    const onRSVPClick = () => {
+        const section = document.querySelector(`#${rsvpSectionId}`);
+        section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
     return (
         <nav className="px-5 md:px-12 py-5 flex justify-between align-middle">
             <motion.a
@@ -16,7 +22,11 @@ const Header = () => {
             >
                 T + A
             </motion.a>
-            <button type="button" className="py-1 px-5 bg-secondary rounded-[5px] text-white font-primary text-2xl tracking-[5px]">
+            <button
+                type="button"
+                className="py-1 px-5 bg-secondary rounded-[5px] text-white font-primary text-2xl tracking-[5px]"
+                onClick={onRSVPClick}
+            >
                 RSVP
             </button>
         </nav>
