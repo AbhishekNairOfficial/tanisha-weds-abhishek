@@ -16,7 +16,7 @@ const RadioGroupComponent = (props: RadioGroupProps) => {
     const { options, label, name } = props;
 
     return (
-        <RadioGroup.Root name={name} aria-label={label}>
+        <RadioGroup.Root required name={name} aria-label={label}>
             <label className="text-black font-secondary text-2xl block mb-2">{label}</label>
             <div className="flex gap-5">
                 {options.map((option) => (

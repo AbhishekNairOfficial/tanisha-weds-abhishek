@@ -32,6 +32,7 @@ const Form = () => {
                 maxLength={50}
                 pattern="[a-zA-Z\s]{5,50}"
                 required
+                placeholder="Your full name here.."
             />
             <RadioGroupComponent
                 name='attendance'
@@ -45,6 +46,7 @@ const Form = () => {
                 max={100}
                 label='No.of Guests in your party (Including you)?'
                 required
+                placeholder="How many people will we see?"
             />
             <Input
                 type="tel"
@@ -52,6 +54,7 @@ const Form = () => {
                 name='phoneNumber'
                 label='Phone Number'
                 required
+                placeholder="+11234567890"
             />
             <button
                 type="submit"
