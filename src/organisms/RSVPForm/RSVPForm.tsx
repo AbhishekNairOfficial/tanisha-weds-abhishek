@@ -1,3 +1,4 @@
+import React from "react";
 import Input from "../../atoms/Input/Input";
 import RadioGroupComponent from "../../molecules/RadioGroup/RadioGroup";
 import rsvpConfig from "../../config/rsvpConfig";
@@ -33,6 +34,7 @@ const Form = () => {
                 pattern="[a-zA-Z\s]{5,50}"
                 required
                 placeholder="Your full name here.."
+                errorMessage="Please enter your full name"
             />
             <RadioGroupComponent
                 name='attendance'
@@ -55,6 +57,7 @@ const Form = () => {
                 label='Phone Number'
                 required
                 placeholder="+11234567890"
+                errorMessage="Please enter the phone number with country code"
             />
             <button
                 type="submit"
