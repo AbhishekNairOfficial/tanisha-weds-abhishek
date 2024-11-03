@@ -1,11 +1,22 @@
 import React from "react";
+
 import Input from "../../atoms/Input/Input";
 import RadioGroupComponent from "../../molecules/RadioGroup/RadioGroup";
 import rsvpConfig from "../../config/rsvpConfig";
 import { saveRSVP } from "../../utils/supabase/supabase";
+import ThankYou from "../../atoms/ThankYou/ThankYou";
 
 const Form = () => {
     const { radioOptions } = rsvpConfig;
+    const [showToast, setShowToast] = React.useState(false)
+
+    React.useEffect(() => {
+        if (showToast) {
+            window.setTimeout(() => {
+                setShowToast(false);
+            }, 3000)
+        }
+    }, [showToast])
 
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         // preventing default;
@@ -19,6 +30,7 @@ const Form = () => {
         if (success) {
             // Clear form after submission
             (event.target as HTMLFormElement).reset();
+            setShowToast(true);
         } else {
             // show error toast
         }
@@ -59,6 +71,7 @@ const Form = () => {
                 placeholder="+11234567890"
                 errorMessage="Please enter the phone number with country code"
             />
+            {showToast && <ThankYou />}
             <button
                 type="submit"
                 className="mt-5 py-3 px-20 bg-secondary rounded-[5px] cursor-pointer text-white font-primary text-2xl m-auto"

@@ -18,6 +18,10 @@ const Input = (props: InputProps) => {
         }
     }
 
+    const onChange = (e: React.FormEvent<HTMLInputElement>) => {
+        (e.target as HTMLInputElement).setCustomValidity('');
+    }
+
     return (
         <>
             <label className="text-black font-secondary text-2xl mt-2" htmlFor={uniqueName}>{label}</label>
@@ -26,6 +30,7 @@ const Input = (props: InputProps) => {
                 name={name}
                 className={`p-4 bg-white font-footer text-xl`}
                 onInvalid={onInvalidInput}
+                onChange={onChange}
                 {...rest}
             />
         </>
