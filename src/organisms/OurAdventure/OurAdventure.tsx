@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "../../atoms/Image/Image";
-import ourAdventureConfig from "../../config/ourAdventureConfig";
+import { ourAdventureConfig } from "../../config/memoriesConfig";
 import convertSrcSet from "../../helpers/convertSrcSet";
 
 const OurAdventure = () => (
