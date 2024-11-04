@@ -10,6 +10,7 @@ const Image = (props: ImageComponentProps) => {
         <img
             className={`border-8 border-white object-cover ${className}`}
             style={{ height, width }}
+            loading="lazy"
             {...rest}
         />
     )
