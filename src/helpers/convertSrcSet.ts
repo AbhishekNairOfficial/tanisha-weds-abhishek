@@ -3,10 +3,7 @@ type SrcObject = {
 };
 
 const convertSrcSet = (srcObject: SrcObject) => {
-  const srcArray = Object.entries(srcObject).map(([key, value]) => {
-    return value + " " + key;
-  });
-  return srcArray.join(", ");
+  return `${srcObject["1x"]}, ${srcObject["2x"]} 2x, ${srcObject["3x"]} 3x`;
 };
 
 export default convertSrcSet;
