@@ -12,26 +12,22 @@ const OurAdventure = () => (
                 Our Adventures
             </h2>
             <div className="h-12"></div>
-            <div className='flex justify-center'>
+            <div className='flex flex-col md:flex-row md:justify-center items-center'>
                 <Image
                     srcSet={convertSrcSet(ourAdventureConfig.imageOne)}
-                    width={'20vw'}
-                    className='-rotate-6 shadow-lg'
+                    className='-rotate-6 shadow-lg w-4/5 md:w-1/5'
                 />
                 <Image
                     srcSet={convertSrcSet(ourAdventureConfig.imageTwo)}
-                    width={'20vw'}
-                    className='-rotate-3 shadow-lg'
+                    className='-rotate-3 shadow-lg w-4/5 md:w-1/5'
                 />
                 <Image
                     srcSet={convertSrcSet(ourAdventureConfig.imageThree)}
-                    width={'20vw'}
-                    className='rotate-6 shadow-lg'
+                    className='rotate-6 shadow-lg w-4/5 md:w-1/5'
                 />
                 <Image
                     srcSet={convertSrcSet(ourAdventureConfig.imageFour)}
-                    width={'20vw'}
-                    className='rotate-12 shadow-lg'
+                    className='rotate-12 shadow-lg w-4/5 md:w-1/5'
                 />
             </div>
             <div className="h-12 md:h-24"></div>

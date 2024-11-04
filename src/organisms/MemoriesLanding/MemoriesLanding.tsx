@@ -17,9 +17,7 @@ const MemoriesLanding = () => {
             <Image
                 src={MEMORIES_BANNER_IMAGE}
                 alt='Abhishek and Tanisha standing next to a waterfall'
-                width='960px'
-                height='480px'
-                className="relative m-auto shadow-lg"
+                className="relative m-auto shadow-lg w-full md:w-[960px]"
             />
         </>
     )

@@ -9,20 +9,16 @@ const Childhood = () => (
             Some of you may remember us like this...
         </h2>
         <div className="h-12"></div>
-        <div className='flex justify-center gap-5'>
+        <div className='flex justify-center md:gap-5'>
             <Image
                 src={ABHISHEK_CHILDHOOD}
                 alt='Abhishek childhood picture'
-                className='-rotate-6 shadow-lg'
-                width='360px'
-                height='360px'
+                className='-rotate-6 shadow-lg w-[200px] md:w-[360px]'
             />
             <Image
                 src={TANISHA_CHILDHOOD}
                 alt='Tanisha childhood picture'
-                className='rotate-6 shadow-lg'
-                width='360px'
-                height='360px'
+                className='rotate-6 shadow-lg w-[200px] md:w-[360px]'
             />
         </div>
     </section>
