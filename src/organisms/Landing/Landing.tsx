@@ -1,18 +1,13 @@
+import Trees from "../../atoms/Trees/Trees"
 import NameComponent from "../../molecules/NameComponent/NameComponent"
 import Header from "../Header/Header"
-
-import TREE_LEFT_IMAGE from '../../assets/landing-page-tree-left.svg';
-import TREE_RIGHT_IMAGE from '../../assets/landing-page-tree-right.svg';
 
 const Landing = () => {
     return (
         <>
             <Header />
             <div className="h-24"></div>
-            <div className="flex w-screen justify-between absolute">
-                <img className="sm:opacity-100 opacity-50" src={TREE_LEFT_IMAGE} loading="lazy" alt="Left Tree" />
-                <img className="hidden md:block" src={TREE_RIGHT_IMAGE} loading="lazy" alt="Right Tree" />
-            </div>
+            <Trees />
             <div className="h-24 md:h-0"></div>
             <NameComponent />
             <div className="h-24"></div>
