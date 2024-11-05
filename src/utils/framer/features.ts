@@ -1,2 +1,2 @@
-import { domMin } from "framer-motion";
-export default domMin;
+import { domMax } from "framer-motion";
+export default domMax;

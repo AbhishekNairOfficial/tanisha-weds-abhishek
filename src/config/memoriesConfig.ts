@@ -24,27 +24,39 @@ export const memoriesLandingConfig = {
   "3x": MEMORIES_BANNER_3x,
 };
 
-export const ourAdventureConfig = {
-  imageOne: {
-    "1x": IMAGE_ONE_1X,
-    "2x": IMAGE_ONE_2X,
-    "3x": IMAGE_ONE_3X,
+export const ourAdventureConfig = [
+  {
+    srcSet: {
+      "1x": IMAGE_ONE_1X,
+      "2x": IMAGE_ONE_2X,
+      "3x": IMAGE_ONE_3X,
+    },
+    rotate: -6,
   },
-  imageTwo: {
-    "1x": IMAGE_TWO_1X,
-    "2x": IMAGE_TWO_2X,
-    "3x": IMAGE_TWO_3X,
+  {
+    srcSet: {
+      "1x": IMAGE_TWO_1X,
+      "2x": IMAGE_TWO_2X,
+      "3x": IMAGE_TWO_3X,
+    },
+    rotate: -3,
   },
-  imageThree: {
-    "1x": IMAGE_THREE_1X,
-    "2x": IMAGE_THREE_2X,
-    "3x": IMAGE_THREE_3X,
+  {
+    srcSet: {
+      "1x": IMAGE_THREE_1X,
+      "2x": IMAGE_THREE_2X,
+      "3x": IMAGE_THREE_3X,
+    },
+    rotate: 6,
   },
-  imageFour: {
-    "1x": IMAGE_FOUR_1X,
-    "2x": IMAGE_FOUR_2X,
-    "3x": IMAGE_FOUR_3X,
+  {
+    srcSet: {
+      "1x": IMAGE_FOUR_1X,
+      "2x": IMAGE_FOUR_2X,
+      "3x": IMAGE_FOUR_3X,
+    },
+    rotate: 12,
   },
-};
+];
 
 export default ourAdventureConfig;

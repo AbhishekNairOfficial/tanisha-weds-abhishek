@@ -13,22 +13,15 @@ const OurAdventure = () => (
             </h2>
             <div className="h-12"></div>
             <div className='flex flex-col md:flex-row md:justify-center items-center'>
-                <Image
-                    srcSet={convertSrcSet(ourAdventureConfig.imageOne)}
-                    className='-rotate-6 shadow-lg w-4/5 md:w-1/5'
-                />
-                <Image
-                    srcSet={convertSrcSet(ourAdventureConfig.imageTwo)}
-                    className='-rotate-3 shadow-lg w-4/5 md:w-1/5'
-                />
-                <Image
-                    srcSet={convertSrcSet(ourAdventureConfig.imageThree)}
-                    className='rotate-6 shadow-lg w-4/5 md:w-1/5'
-                />
-                <Image
-                    srcSet={convertSrcSet(ourAdventureConfig.imageFour)}
-                    className='rotate-12 shadow-lg w-4/5 md:w-1/5'
-                />
+                {ourAdventureConfig.map((adventure) => (
+                    <Image
+                        key={adventure.srcSet["1x"]}
+                        srcSet={convertSrcSet(adventure.srcSet)}
+                        className='shadow-lg w-4/5 md:w-1/5'
+                        rotate={adventure.rotate}
+                        animate
+                    />
+                ))}
             </div>
             <div className="h-12 md:h-24"></div>
         </section>

@@ -13,12 +13,16 @@ const Childhood = () => (
             <Image
                 src={ABHISHEK_CHILDHOOD}
                 alt='Abhishek childhood picture'
-                className='-rotate-6 shadow-lg w-[200px] md:w-[360px]'
+                className='w-[200px] md:w-[360px]'
+                rotate={-6}
+                animate
             />
             <Image
                 src={TANISHA_CHILDHOOD}
                 alt='Tanisha childhood picture'
-                className='rotate-6 shadow-lg w-[200px] md:w-[360px]'
+                rotate={6}
+                className='w-[200px] md:w-[360px]'
+                animate
             />
         </div>
     </section>
