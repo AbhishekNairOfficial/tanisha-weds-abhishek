@@ -9,7 +9,12 @@ type ImageComponentProps = React.ComponentProps<'img'> & MotionProps & {
 }
 
 const Image = (props: ImageComponentProps) => {
-    const { className, animate = false, rotate = 0, ...rest } = props;
+    const {
+        className,
+        animate = false,
+        rotate = 0,
+        loading = 'lazy',
+        ...rest } = props;
 
     const id = React.useId();
     const [expanded, setExpanded] = React.useState<boolean>(false);
@@ -49,12 +54,12 @@ const Image = (props: ImageComponentProps) => {
                         aria-label="Clickable Image"
                         layoutId={id}
                         key={id}
-                        className={`border-8 border-white shadow-lg object-cover ${className}`}
+                        className={`border-8 border-white shadow-2xl object-cover ${className}`}
                         animate={{
                             rotate: rotate,
                             zIndex: 1
                         }}
-                        loading="lazy"
+                        loading={loading}
                         {...rest}
                     />
                 </AnimatePresence>
