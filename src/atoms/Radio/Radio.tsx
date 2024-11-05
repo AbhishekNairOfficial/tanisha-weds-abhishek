@@ -15,6 +15,7 @@ const Radio = (props: RadioButtonProps) => {
     return (
         <div className="flex flex-row gap-2">
             <RadioGroup.Item
+                aria-label={value}
                 className="bg-white size-6 rounded-full cursor-default hover:bg-bgWhite"
                 value={value}
                 id={uniqueId}
