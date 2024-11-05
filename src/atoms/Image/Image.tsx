@@ -1,5 +1,7 @@
 import React from "react"
 import { AnimatePresence, LayoutGroup, m, MotionProps } from 'framer-motion';
+import useScreenWidth from "../../hooks/useScreenWidth";
+import { MOBILE_SCREEN_WIDTH } from "../../config/constants";
 
 type ImageComponentProps = React.ComponentProps<'img'> & MotionProps & {
     animate?: boolean;
@@ -11,6 +13,9 @@ const Image = (props: ImageComponentProps) => {
 
     const id = React.useId();
     const [expanded, setExpanded] = React.useState<boolean>(false);
+    const screenWidth = useScreenWidth();
+
+    const isMobile = screenWidth < MOBILE_SCREEN_WIDTH;
 
     return (
         <LayoutGroup>
@@ -39,8 +44,8 @@ const Image = (props: ImageComponentProps) => {
             ) : (
                 <AnimatePresence mode='wait'>
                     <m.img
-                        role={animate ? 'button' : ''}
-                        onClick={() => animate && setExpanded(true)}
+                        role={animate && !isMobile ? 'button' : ''}
+                        onClick={() => animate && !isMobile && setExpanded(true)}
                         aria-label="Clickable Image"
                         layoutId={id}
                         key={id}
