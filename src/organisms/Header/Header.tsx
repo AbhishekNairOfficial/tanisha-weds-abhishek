@@ -3,6 +3,8 @@ import { rsvpSectionId } from '../../config/constants';
 import NavLink from '../../atoms/NavLink/NavLink';
 import { useNavigate } from 'react-router-dom';
 
+import MEMORIES_ICON from '../../assets/memories-icon.svg';
+
 const Header = () => {
     const navigate = useNavigate();
 
@@ -28,7 +30,7 @@ const Header = () => {
             >
                 T + A
             </m.a>
-            <NavLink link='/memories' title='Memories' />
+            <NavLink link='/memories' title='Memories' icon={MEMORIES_ICON} />
             <button
                 type="button"
                 className="py-1 px-5 bg-secondary rounded-[5px] text-white font-primary text-2xl tracking-[5px]"
