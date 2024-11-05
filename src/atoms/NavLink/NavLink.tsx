@@ -1,4 +1,3 @@
-import React from "react"
 import { Link } from "react-router-dom"
 import useScreenWidth from "../../hooks/useScreenWidth"
 import { MOBILE_SCREEN_WIDTH } from "../../config/constants"
