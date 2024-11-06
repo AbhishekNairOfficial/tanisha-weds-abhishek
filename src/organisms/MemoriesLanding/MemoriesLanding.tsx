@@ -1,15 +1,10 @@
-import Trees from "../../atoms/Trees/Trees"
-import Header from "../../organisms/Header/Header"
 import MEMORIES_BANNER_IMAGE from '../../assets/memories-banner-image.webp';
 import Image from '../../atoms/Image/Image';
+import LandingTemplate from "../../Templates/Landing";
 
 const MemoriesLanding = () => {
     return (
-        <>
-            <Header />
-            <div className="h-24"></div>
-            <Trees />
-            <div className="h-24 md:h-0"></div>
+        <LandingTemplate>
             <h1 className="font-primary text-primary text-5xl md:text-7xl text-center">
                 Memories
             </h1>
@@ -20,7 +15,7 @@ const MemoriesLanding = () => {
                 className="relative m-auto w-full md:w-[960px]"
                 loading='eager'
             />
-        </>
+        </LandingTemplate>
     )
 }
 

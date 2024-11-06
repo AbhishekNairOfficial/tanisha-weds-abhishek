@@ -1,14 +1,9 @@
-import Trees from "../../atoms/Trees/Trees"
 import NameComponent from "../../molecules/NameComponent/NameComponent"
-import Header from "../Header/Header"
+import LandingTemplate from "../../Templates/Landing"
 
 const Landing = () => {
     return (
-        <>
-            <Header />
-            <div className="h-24"></div>
-            <Trees />
-            <div className="h-24 md:h-0"></div>
+        <LandingTemplate>
             <NameComponent />
             <div className="h-24"></div>
             <h2 className="font-primary text-primary text-2xl md:text-4xl m-auto w-screen text-center">
@@ -23,7 +18,7 @@ const Landing = () => {
                 Love, T&A
             </h3>
             <hr className="w-24 mt-[30px] border-t-2 border-primary m-auto text-center" />
-        </>
+        </LandingTemplate>
     )
 }
 
