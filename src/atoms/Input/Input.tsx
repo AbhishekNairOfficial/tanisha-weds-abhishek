@@ -35,7 +35,7 @@ const Input = (props: InputProps) => {
             <Tag
                 id={uniqueName}
                 name={name}
-                className={`p-4 bg-white font-footer text-xl`}
+                className={`p-4 bg-white font-secondary text-xl`}
                 onInvalid={onInvalidInput}
                 onChange={onChange}
                 {...rest}

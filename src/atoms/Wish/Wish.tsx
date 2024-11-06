@@ -9,10 +9,10 @@ const Wish = (props: WishProps) => (
             “
         </span>
         <div className="flex flex-col flex-grow">
-            <p className="flex-grow font-secondary text-primary text-2xl">
+            <p className="capitalize flex-grow font-secondary text-primary text-2xl">
                 {props.message}
             </p>
-            <h4 className="self-end font-secondary text-primary font-bold text-2xl">
+            <h4 className="capitalize self-end font-secondary text-primary font-bold text-2xl">
                 {props.name}
             </h4>
         </div>
