@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import react from "@vitejs/plugin-react-swc";
 
@@ -11,4 +11,7 @@ export default defineConfig({
       webp: { quality: 75 },
     }),
   ],
+  test: {
+    environment: "happy-dom",
+  },
 });
