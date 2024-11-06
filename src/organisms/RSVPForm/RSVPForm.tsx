@@ -58,7 +58,7 @@ const Form = () => {
                 type="number"
                 min={1}
                 max={100}
-                label='No.of Guests in your party (Including you)?'
+                label='Number of Guests in your party (Including you)?'
                 required
                 placeholder="How many people will we see?"
             />
@@ -68,7 +68,7 @@ const Form = () => {
                 name='phoneNumber'
                 label='Phone Number'
                 required
-                placeholder="+11234567890"
+                placeholder="+91 xxxxx-xxxxx"
                 errorMessage="Please enter the phone number with country code"
             />
             {showToast && <ThankYou />}
