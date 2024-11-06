@@ -32,7 +32,7 @@ const GuestBookForm = () => {
     }
 
     return (
-        <section className="md:mx-[200px]">
+        <section className="md:mx-[200px] mx-5">
             <form className="flex flex-col gap-4" onSubmit={(e) => onSubmit(e)}>
                 <Input
                     name='name'

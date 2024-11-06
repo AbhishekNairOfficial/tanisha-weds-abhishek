@@ -17,12 +17,12 @@ const YourWishes = () => {
 
     return (
         <section className="md:mx-[200px]">
-            <h2 className="text-center font-primary text-primary text-2xl md:text-4xl">
+            <h2 className="text-center font-primary text-primary text-3xl md:text-4xl">
                 Your Wishes
             </h2>
             {wishes.map(((wish, index) => (
                 <>
-                    <hr className={`my-16 mx-auto border-primary border-1 ${index === 0 ? 'w-0' : 'w-56'}`} />
+                    <hr className={`my-16 mx-auto border-primary border-1 ${index === 0 ? 'w-0 my-8' : 'w-56'}`} />
                     <Wish
                         key={wish.id}
                         message={wish.message}
