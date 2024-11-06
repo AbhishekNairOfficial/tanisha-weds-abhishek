@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-import { SaveRSVPInputProps } from "./types";
+import { SaveRSVPInputProps, GetWishesResponse } from "./types";
 
 const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
@@ -43,4 +43,17 @@ export const saveGuestBook = async (
     console.error({ error });
     return false;
   }
+};
+
+export const getWishes = async (): Promise<GetWishesResponse[]> => {
+  const { data, error } = await supabase
+    .from(guestBookTableName)
+    .select()
+    .eq("approved", true);
+
+  if (error) {
+    console.error(error);
+    return [];
+  }
+  return data;
 };
