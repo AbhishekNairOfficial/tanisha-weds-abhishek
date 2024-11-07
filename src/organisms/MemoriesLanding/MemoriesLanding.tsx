@@ -1,6 +1,6 @@
 import MEMORIES_BANNER_IMAGE from '../../assets/memories-banner-image.webp';
 import Image from '../../atoms/Image/Image';
-import LandingTemplate from "../../Templates/Landing";
+import LandingTemplate from "../../Templates/Landing/Landing";
 
 const MemoriesLanding = () => {
     return (

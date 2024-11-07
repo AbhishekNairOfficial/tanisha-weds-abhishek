@@ -1,4 +1,4 @@
-import LandingTemplate from "../../Templates/Landing"
+import LandingTemplate from "../../Templates/Landing/Landing"
 
 const GuestBookLanding = () => {
     return (

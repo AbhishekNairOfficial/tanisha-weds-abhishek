@@ -1,6 +1,6 @@
 import React from "react"
-import Header from "../organisms/Header/Header"
-import Trees from "../atoms/Trees/Trees"
+import Header from "../../organisms/Header/Header"
+import Trees from "../../atoms/Trees/Trees"
 
 type LandingProps = {
     children: React.ReactNode

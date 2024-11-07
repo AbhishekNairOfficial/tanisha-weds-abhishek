@@ -3,11 +3,11 @@ import { render, screen } from '@testing-library/react';
 import LandingTemplate from './Landing';
 
 // Mock child components
-vi.mock('../organisms/Header/Header', () => ({
+vi.mock('../../organisms/Header/Header', () => ({
     default: () => <div data-testid="mock-header">Header</div>
 }));
 
-vi.mock('../atoms/Trees/Trees', () => ({
+vi.mock('../../atoms/Trees/Trees', () => ({
     default: () => <div data-testid="mock-trees">Trees</div>
 }));
 

@@ -1,5 +1,5 @@
 import NameComponent from "../../molecules/NameComponent/NameComponent"
-import LandingTemplate from "../../Templates/Landing"
+import LandingTemplate from "../../Templates/Landing/Landing"
 
 const Landing = () => {
     return (
