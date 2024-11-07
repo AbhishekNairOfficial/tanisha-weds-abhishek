@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     ViteImageOptimizer({
       /* pass your config */
-      webp: { quality: 75 },
+      webp: { quality: 50 },
     }),
   ],
   test: {
