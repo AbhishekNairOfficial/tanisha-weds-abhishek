@@ -5,7 +5,7 @@ const venueConfig = {
     directions: [
         {
         title: 'Metro',
-        body: 'Get down at Kengeri metro station, and take bus 227 C/J/R'
+        body: 'Get down at Challaghatta metro station, and take bus 227 C/J/R'
         },
         {
             title: 'Cab / Auto',
