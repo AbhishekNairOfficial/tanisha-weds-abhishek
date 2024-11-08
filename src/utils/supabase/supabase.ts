@@ -15,7 +15,9 @@ export const saveRSVP = async (data: SaveRSVPInputProps): Promise<boolean> => {
     created_at: new Date().toISOString().replace("T", " ").replace("Z", ""),
   };
   try {
-    const response = await supabase.from(rsvpTableName).insert([payload]);
+    const response = await supabase
+      .from(rsvpTableName)
+      .upsert([payload], { onConflict: "phone_number" });
     if (response.error) {
       throw new Error("Error while saving");
     }
@@ -34,7 +36,9 @@ export const saveGuestBook = async (
     created_at: new Date().toISOString().replace("T", " ").replace("Z", ""),
   };
   try {
-    const response = await supabase.from(guestBookTableName).insert([payload]);
+    const response = await supabase
+      .from(guestBookTableName)
+      .upsert([payload], { onConflict: "phone_number" });
     if (response.error) {
       throw new Error("Error while saving");
     }
