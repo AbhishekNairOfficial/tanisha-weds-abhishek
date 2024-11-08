@@ -17,7 +17,7 @@ export const saveRSVP = async (data: SaveRSVPInputProps): Promise<boolean> => {
   try {
     const response = await supabase
       .from(rsvpTableName)
-      .upsert([payload], { onConflict: "phone_number" });
+      .upsert([payload], { onConflict: "phoneNumber" });
     if (response.error) {
       throw new Error("Error while saving");
     }
@@ -38,7 +38,7 @@ export const saveGuestBook = async (
   try {
     const response = await supabase
       .from(guestBookTableName)
-      .upsert([payload], { onConflict: "phone_number" });
+      .upsert([payload], { onConflict: "phoneNumber" });
     if (response.error) {
       throw new Error("Error while saving");
     }
