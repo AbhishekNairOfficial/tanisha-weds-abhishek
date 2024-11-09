@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-import { SaveRSVPInputProps, GetWishesResponse } from "./types";
+import { SaveRSVPInputProps, GetWishesResponse, RSVPResponse } from "./types";
 
 const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
@@ -56,6 +56,19 @@ export const getWishes = async (): Promise<GetWishesResponse[]> => {
     .from(guestBookTableName)
     .select()
     .eq("approved", true);
+
+  if (error) {
+    console.error(error);
+    return [];
+  }
+  return data;
+};
+
+export const getRSVP = async (): Promise<RSVPResponse[]> => {
+  const { data, error } = await supabase
+    .from(rsvpTableName)
+    .select()
+    .eq("attendance", true);
 
   if (error) {
     console.error(error);

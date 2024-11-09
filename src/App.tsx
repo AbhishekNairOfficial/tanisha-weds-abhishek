@@ -8,6 +8,7 @@ import {
 import './App.css'
 import MemoriesPage from "./pages/Memories/Memories";
 import GuestBookPage from "./pages/GuestBook/GuestBookPage";
+import AdminPage from "./pages/Admin/Admin";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/guestbook",
     element: <GuestBookPage />,
+  },
+  {
+    path: "/admin",
+    element: <AdminPage />,
   },
 ]);
 

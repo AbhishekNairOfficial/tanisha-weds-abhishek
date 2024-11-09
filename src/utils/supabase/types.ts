@@ -9,3 +9,8 @@ export type GetWishesResponse = {
   created_at: string;
   approved: boolean;
 };
+
+export type RSVPResponse = {
+  name: string;
+  noOfGuests: number;
+};
