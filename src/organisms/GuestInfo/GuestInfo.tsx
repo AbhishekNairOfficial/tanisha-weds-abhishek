@@ -1,6 +1,7 @@
 import React from "react";
 import { RSVPResponse } from "../../utils/supabase/types";
 import { getRSVP } from "../../utils/supabase/supabase";
+import GuestMessage from "../../atoms/GuestMessage/GuestMessage";
 
 const GuestInfo = () => {
     const [rsvp, setRSVP] = React.useState<RSVPResponse[] | []>([]);
@@ -18,11 +19,9 @@ const GuestInfo = () => {
         <section>
             <h1 className="text-3xl mb-5">Guest Info</h1>
             <ul className="border border-black">
-                <li className="flex gap-5 p-5">
+                <li className="flex flex-col">
                     {rsvp.map((rsvpItem) => (
-                        <span className="text-xl" key={rsvpItem.name}>
-                            {rsvpItem.name} is attending with {rsvpItem.noOfGuests} other Guests!
-                        </span>
+                        <GuestMessage key={rsvpItem.name} name={rsvpItem.name} guests={rsvpItem.noOfGuests} />
                     ))}
                 </li>
             </ul>
