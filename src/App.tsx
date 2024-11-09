@@ -1,14 +1,16 @@
 import { LazyMotion } from "framer-motion"
-import HomePage from './pages/Home/Home'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
 import './App.css'
-import MemoriesPage from "./pages/Memories/Memories";
-import GuestBookPage from "./pages/GuestBook/GuestBookPage";
-import AdminPage from "./pages/Admin/Admin";
+import React from "react";
+
+const HomePage = React.lazy(() => import('./pages/Home/Home'));
+const MemoriesPage = React.lazy(() => import("./pages/Memories/Memories"));
+const GuestBookPage = React.lazy(() => import("./pages/GuestBook/GuestBookPage"));
+const AdminPage = React.lazy(() => import("./pages/Admin/Admin"));
 
 const router = createBrowserRouter([
   {
@@ -35,9 +37,11 @@ function App() {
 
   return (
     <div className='bg-bg'>
-      <LazyMotion strict features={loadFeatures}>
-        <RouterProvider router={router} />
-      </LazyMotion>
+      <React.Suspense>
+        <LazyMotion strict features={loadFeatures}>
+          <RouterProvider router={router} />
+        </LazyMotion>
+      </React.Suspense>
     </div>
   )
 }

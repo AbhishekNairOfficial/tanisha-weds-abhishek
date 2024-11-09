@@ -3,8 +3,18 @@ import TREE_RIGHT_IMAGE from '../../assets/landing-page-tree-right.webp';
 
 const Trees = () => (
     <div className="flex w-screen justify-between absolute">
-        <img className="sm:opacity-100 opacity-50" src={TREE_LEFT_IMAGE} loading="eager" alt="Left Tree" />
-        <img className="hidden md:block" src={TREE_RIGHT_IMAGE} loading="eager" alt="Right Tree" />
+        <img
+            className="sm:opacity-100 opacity-50"
+            src={TREE_LEFT_IMAGE}
+            loading="lazy"
+            alt="Left Tree"
+        />
+        <img
+            className="hidden md:block"
+            src={TREE_RIGHT_IMAGE}
+            loading="lazy"
+            alt="Right Tree"
+        />
     </div>
 )
 
