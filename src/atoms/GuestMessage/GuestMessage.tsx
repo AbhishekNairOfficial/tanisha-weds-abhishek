@@ -6,13 +6,13 @@ type GuestMessageProps = {
 const GuestMessage = (props: GuestMessageProps) => {
     const { name, guests } = props;
     const guestText = () => {
-        if (guests > 1) {
-            return `with ${guests - 1} other Guests!`;
-        } else if (guests === 1) {
-            return "alone :(";
-        } else {
-            // if 0
-            return '';
+        const otherGuests = guests - 1;
+
+        switch (guests) {
+            case 0: return '';
+            case 1: return 'alone :(';
+            case 2: return `with ${otherGuests} other guest`;
+            default: return `with ${otherGuests} other Guests!`;
         }
     }
 
