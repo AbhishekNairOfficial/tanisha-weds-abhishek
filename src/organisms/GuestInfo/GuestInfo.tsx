@@ -15,9 +15,15 @@ const GuestInfo = () => {
         })();
     }, []);
 
+    const totalCount = React.useMemo(() => (
+        rsvp.reduce((total, current) => {
+            return total + current.noOfGuests;
+        }, 0)
+    ), [rsvp]);
+
     return (
         <section>
-            <h1 className="text-3xl mb-5">Guest Info</h1>
+            <h1 className="text-3xl mb-5">Guest Info ({totalCount}):</h1>
             <ul className="border border-black">
                 <li className="flex flex-col">
                     {rsvp.map((rsvpItem) => (
