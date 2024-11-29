@@ -8,7 +8,7 @@ const supabase = createClient(
 
 const rsvpTableName = import.meta.env.VITE_TABLE_NAME;
 const guestBookTableName = import.meta.env.VITE_GUESTBOOK_TABLE_NAME;
-const imagesBucketName = "photos";
+const imagesBucketName = import.meta.env.VITE_PHOTOS_BUCKET_NAME;
 
 export const saveRSVP = async (data: SaveRSVPInputProps): Promise<boolean> => {
   const payload = {
