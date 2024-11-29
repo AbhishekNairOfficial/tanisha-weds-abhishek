@@ -5,19 +5,11 @@ import RadioGroupComponent from "../../molecules/RadioGroup/RadioGroup";
 import rsvpConfig from "../../config/rsvpConfig";
 import { saveRSVP } from "../../utils/supabase/supabase";
 import ThankYou from "../../atoms/ThankYou/ThankYou";
+import useToast from "../../hooks/useToast";
 
 const Form = () => {
     const { radioOptions } = rsvpConfig;
-    const [showToast, setShowToast] = React.useState(false)
-
-    React.useEffect(() => {
-        if (showToast) {
-            window.setTimeout(() => {
-                setShowToast(false);
-            }, 3000)
-        }
-    }, [showToast])
-
+    const [showToast, setShowToast] = useToast({});
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         // preventing default;
         event.preventDefault();

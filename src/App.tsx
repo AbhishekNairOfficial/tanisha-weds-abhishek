@@ -11,6 +11,7 @@ const HomePage = React.lazy(() => import('./pages/Home/Home'));
 const MemoriesPage = React.lazy(() => import("./pages/Memories/Memories"));
 const GuestBookPage = React.lazy(() => import("./pages/GuestBook/GuestBookPage"));
 const AdminPage = React.lazy(() => import("./pages/Admin/Admin"));
+const UploadPage = React.lazy(() => import("./pages/Upload/Upload"));
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <AdminPage />,
+  },
+  {
+    path: "/upload",
+    element: <UploadPage />,
   },
 ]);
 

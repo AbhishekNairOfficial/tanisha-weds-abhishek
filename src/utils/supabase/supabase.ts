@@ -8,6 +8,7 @@ const supabase = createClient(
 
 const rsvpTableName = import.meta.env.VITE_TABLE_NAME;
 const guestBookTableName = import.meta.env.VITE_GUESTBOOK_TABLE_NAME;
+const imagesBucketName = "photos";
 
 export const saveRSVP = async (data: SaveRSVPInputProps): Promise<boolean> => {
   const payload = {
@@ -75,4 +76,26 @@ export const getRSVP = async (): Promise<RSVPResponse[]> => {
     return [];
   }
   return data;
+};
+
+export const uploadImages = async (files: File[]): Promise<boolean> => {
+  let allUploadsSuccessful = true;
+
+  for (const file of files) {
+    const fileName = `${Date.now()}-${file.name}`;
+
+    const { error } = await supabase.storage
+      .from(imagesBucketName)
+      .upload(fileName, file, {
+        cacheControl: "3600",
+        upsert: false,
+      });
+
+    if (error) {
+      console.error("Upload failed:", error);
+      allUploadsSuccessful = false;
+    }
+  }
+
+  return allUploadsSuccessful;
 };
