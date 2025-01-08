@@ -10,9 +10,11 @@ import useToast from "../../hooks/useToast";
 const Form = () => {
     const { radioOptions } = rsvpConfig;
     const [showToast, setShowToast] = useToast({});
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         // preventing default;
         event.preventDefault();
+        setIsSubmitting(true);
         const formData = new FormData(event.currentTarget);
         const payload: { [key: string]: FormDataEntryValue } = {};
         formData.forEach((value: FormDataEntryValue, key: string) => {
@@ -26,6 +28,7 @@ const Form = () => {
         } else {
             // show error toast
         }
+        setIsSubmitting(false);
     }
 
     return (
@@ -66,7 +69,8 @@ const Form = () => {
             {showToast && <ThankYou />}
             <button
                 type="submit"
-                className="mt-5 py-3 px-20 bg-secondary rounded-[5px] cursor-pointer text-white font-primary text-2xl m-auto"
+                className={`mt-5 py-3 px-20 bg-secondary rounded-[5px] cursor-pointer text-white font-primary text-2xl m-auto disabled:opacity-50`}
+                disabled={isSubmitting}
             >
                 Submit
             </button>
